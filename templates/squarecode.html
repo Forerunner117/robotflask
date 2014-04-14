@@ -1,0 +1,35 @@
+<!doctype html>
+
+<title>Hello from Flask</title>
+
+{% if feet %}
+  <h1>The code below will move your robot around a {{ feet }} by {{ feet }} square...</h1>
+  <p>
+ 	symbol leftForward = B.4<br>
+ 	symbol leftBack = B.5<br>
+	symbol rightWheel = B.6<br>
+	symbol rightBack = B.7<br>
+	symbol counter = b1<br>
+	<br>
+
+	main:<br>
+	for counter = 1 to 4
+	high leftForward<br>
+	high rightForward<br>
+	pause {{ seconds }}<br>
+	low leftForward<br>
+	high leftBack<br>
+	pause 250<br>
+	low leftBack<br>
+	high leftForward<br>
+	next counter<br>
+	<br>
+	end
+
+
+  </p>
+
+{% else %}
+  <h1>Hello!</h1>
+{% endif %}
+

@@ -1,0 +1,25 @@
+<!doctype html>
+
+<title>Hello from Flask</title>
+
+{% if feet %}
+  <h1>The code below will move your robot {{ feet }} feet...</h1>
+  <p>
+ 	symbol leftWheel = B.4<br>
+	symbol rightWheel = B.6<br>
+	<br>
+	main:<br>
+	high leftWheel<br>
+	high rightWheel<br>
+	pause {{ seconds }}<br>
+	low leftWheel<br>
+	low rightWheel<br>
+	end
+
+
+  </p>
+
+{% else %}
+  <h1>Hello!</h1>
+{% endif %}
+
